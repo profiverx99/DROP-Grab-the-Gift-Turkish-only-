@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Hediye Avcısı - Rekor Kır!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- Skor Tablosu -->
+        <div id="ui">
+            <div class="stat-box">Puan: <span id="score">0</span></div>
+            <div class="stat-box">Rekor: <span id="high-score">0</span></div>
+        </div>
+        
+        <!-- Ana Menü -->
+        <div id="menu">
+            <h1>Yılbaşı Avcısı 🎄</h1>
+            <p>Zorluk Seç ve Başla:</p>
+            <div class="difficulty-buttons">
+                <button onclick="startGame('easy')">Kolay</button>
+                <button onclick="startGame('normal')">Normal</button>
+                <button onclick="startGame('hard')">Zor</button>
+                <button onclick="startGame('impossible')" class="btn-imp">İMKANSIZ</button>
+            </div>
+            <div class="controls-info">Hareket: Fare | Bomba: OYUN BİTER!</div>
+        </div>
+
+        <div id="basket">🎅</div>
+
+        <!-- Oyun Bitti Ekranı -->
+        <div id="game-over">
+            <h1 id="death-reason">BOMBA! 💥</h1>
+            <p>Puanın: <span id="final-score">0</span></p>
+            <p id="new-record-msg" style="color: #ffc300; display: none;">YENİ REKOR!</p>
+            <button onclick="showMenu()">Ana Menüye Dön</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
